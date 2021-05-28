@@ -10,6 +10,10 @@ body {
     margin: 0;
 }
 
+img {
+    max-width: 100%;
+}
+
 .header{
     background: #f2f3f6;
 }
@@ -34,6 +38,7 @@ body {
     display: inline-block;
     border: none;
     font-size: 16px;
+    cursor: pointer;
 }
 
 .button-link {
@@ -50,13 +55,12 @@ body {
 .button-primary {
     background: #1A75E8;
     border-radius: 5px;
-    padding: 15px 30px 15px 30px;
+    padding: 15px 30px;
     color: #fff;
 }
 
 .button-icon {
     vertical-align: middle;
-    margin-right: 10px;
 }
 
 .hero-title {
@@ -70,6 +74,7 @@ body {
     font-size: 18px;
     line-height: 140%;
     margin-bottom: 30px;
+    margin-left: 10px;
 }
 
 .input-group {
@@ -91,7 +96,7 @@ body {
 }
 
 .input:focus {
-    outline: none;
+    outline: 1px dotted #666;
 }
 
 .tags-group {
@@ -119,6 +124,10 @@ body {
     margin-bottom: 40px;
     margin-top: 0;
 }
+
+.section:first-of-type {
+    padding-bottom: 0;
+  }
 
 .card {
     text-decoration: none;
@@ -166,14 +175,25 @@ body {
 .offer-heading {
     font-size: 16px;
     line-height: 19px;
-    margin-bottom: 10px;
-    margin-top: 0;
+    margin: 0 auto;
 }
 
 .offer-place {
     font-size: 14px;
     line-height: 17px;
+    margin-top: 10px;
 }
+
+.offer-more {
+    font-size: 16px;
+    line-height: 19px;
+    color: #fff;
+    margin: 20px auto 0;
+    border: 0;
+    padding: 15px 30px;
+    background: #1a75e8;
+    border-radius: 5px;
+  }
 
 .offer-salary {
     margin-left: 46px;
@@ -210,6 +230,7 @@ body {
     font-size: 36px;
     line-height: 43px;
     margin-bottom: 20px;
+    color: #111238;
 }
 
 .subscribe-subtitle {
@@ -251,6 +272,93 @@ body {
     text-decoration: none;
     color: #111238;
 }
+
+@media (max-width: 1200px) {
+    .offer-salary {
+      margin-left: 25px;
+      margin-right: 25px;
+    }
+    .more {
+      margin-right: 0;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .more {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .offer-title {
+      margin-left: 0;
+      text-align: center;
+    }
+    .tags-group {
+      margin-left: 0;
+    }
+    .tag {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+    .navbar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      transform: translateX(-100%);
+      transition: transform 0.3s;
+    }
+    .is-open {
+      transform: translateX(0);
+    }
+    .menu-item:not(:last-child) {
+      margin-right: 0;
+    }
+    .button-link {
+      margin-right: 0;
+    }
+    .close-button {
+      position: fixed;
+      top: 130px;
+      right: 10px;
+      text-decoration: none;
+      font-size: 44px;
+      text-align: right;
+      padding: 20px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .hero {
+      text-align: center;
+    }
+    .hero-title {
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 29px;
+    }
+    .subscribe-title {
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 29px;
+    }
+    .tags-label {
+      display: block;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .section-title {
+      text-align: center;
+    }
+    .card {
+      max-width: 250px;
+      margin: auto;
+    }
+    .footer {
+      text-align: center;
+    }
+  }
 
 
 
